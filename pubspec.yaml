@@ -22,7 +22,7 @@ dependencies:
 
 
   core:
-    path: ../QClass-P/core
+    path: ../QClass-V3/core
 
 
 dev_dependencies:
