@@ -21,8 +21,8 @@ dependencies:
   currency_text_input_formatter: ^2.1.10
 
 
-  # core:
-  #   path: ../core
+  core:
+    path: ../QClass-P/core
 
 
 dev_dependencies:
