@@ -20,7 +20,7 @@ class CustomTooltip extends StatelessWidget {
       verticalOffset: const Spacing(5).value.responsiveHeight,
       excludeFromSemantics: true,
       decoration: BoxDecoration(
-        color: context.colorScheme.background,
+        color: context.colorScheme.surface,
         borderRadius: AppThemeBase.borderRadiusSM,
         border: Border.all(
           color: AppColorsBase.neutrla1,

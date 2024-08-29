@@ -1,4 +1,3 @@
-import 'package:core/core.dart';
 import 'package:design_system_qclass/design_system_qclass.dart';
 import 'package:flutter/material.dart'
     show
@@ -20,6 +19,7 @@ import 'package:flutter/material.dart'
         MainAxisSize,
         Material,
         MaterialLocalizations,
+        Navigator,
         Padding,
         SafeArea,
         StatelessWidget,
@@ -75,15 +75,15 @@ class _CustomDialog extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: AppThemeBase.borderRadiusMD,
                   border: Border.all(
-                    color: context.colorScheme.background,
+                    color: context.colorScheme.surface,
                     width: 2,
                   ),
-                  color: context.colorScheme.background,
+                  color: context.colorScheme.surface,
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 5,
                       spreadRadius: -5,
-                      color: context.colorScheme.background.withOpacity(0.5),
+                      color: context.colorScheme.surface.withOpacity(0.5),
                     ),
                   ],
                 ),
@@ -97,7 +97,7 @@ class _CustomDialog extends StatelessWidget {
                       Align(
                         alignment: Alignment.topRight,
                         child: GestureDetector(
-                          onTap: () => Nav.to.pop(response: false),
+                          onTap: () => Navigator.of(context).pop(false),
                           child: Padding(
                             padding: EdgeInsets.only(
                               bottom: const Spacing(2).value,

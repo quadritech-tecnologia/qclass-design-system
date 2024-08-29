@@ -20,9 +20,10 @@ dependencies:
   mask_text_input_formatter: ^2.5.0
   currency_text_input_formatter: ^2.1.10
 
+  #====== Firebase ======
+  firebase_core: ^2.31.1
+  cloud_firestore: ^4.17.4
 
-  core:
-    path: ../QClass-V3/core
 
 
 dev_dependencies:
