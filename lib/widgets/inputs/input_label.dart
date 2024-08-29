@@ -18,7 +18,7 @@ class InputLabel extends StatelessWidget {
       label,
       overflow: TextOverflow.ellipsis,
       style: context.textTheme.bodyMedium?.copyWith(
-        color: context.colorScheme.onBackground,
+        color: context.colorScheme.onSurface,
       ),
     );
   }

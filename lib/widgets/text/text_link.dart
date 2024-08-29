@@ -35,7 +35,7 @@ class TextLink extends StatelessWidget {
                   text,
                   textAlign: TextAlign.center,
                   style: context.textTheme.bodyMedium?.copyWith(
-                    color: context.colorScheme.onBackground,
+                    color: context.colorScheme.onSurface,
                     decorationColor: context.colorScheme.primary,
                     fontWeight: context.textTheme.fontWeightMedium,
                     decoration: underline ? TextDecoration.underline : null,

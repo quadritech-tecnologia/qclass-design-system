@@ -1,4 +1,4 @@
-import 'package:core/core.dart' show Timestamp;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart' as df show DateFormat;
 
 class DateFormat {

@@ -143,7 +143,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
               textCapitalization: widget.textCapitalization,
               textInputAction: widget.textInputAction ?? TextInputAction.done,
               style: _textTheme.bodyMedium?.copyWith(
-                color: _colorScheme.onBackground
+                color: _colorScheme.onSurface
                     .withOpacity(widget.enabled ? 1 : .36),
                 fontSize: fontSize,
               ),
@@ -151,8 +151,8 @@ class _CustomInputFieldState extends State<CustomInputField> {
               decoration: InputDecoration(
                 isDense: false,
                 fillColor: widget.enabled
-                    ? _colorScheme.onBackground.withOpacity(.08)
-                    : _colorScheme.onBackground.withOpacity(.08),
+                    ? _colorScheme.onSurface.withOpacity(.08)
+                    : _colorScheme.onSurface.withOpacity(.08),
                 isCollapsed: true,
                 filled: true,
                 hintStyle: _textTheme.bodyMedium?.copyWith(

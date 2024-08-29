@@ -47,8 +47,8 @@ class CustomButton extends StatefulWidget {
             break;
           default:
             color = context.isDarkMode
-                ? context.colorScheme.onBackground
-                : context.colorScheme.background;
+                ? context.colorScheme.onSurface
+                : context.colorScheme.surface;
             break;
         }
         return Icon(
@@ -78,8 +78,8 @@ class CustomButton extends StatefulWidget {
             break;
           default:
             color = context.isDarkMode
-                ? context.colorScheme.onBackground
-                : context.colorScheme.background;
+                ? context.colorScheme.onSurface
+                : context.colorScheme.surface;
             break;
         }
         switch (heightType) {
@@ -204,19 +204,19 @@ class _CustomButtonState extends State<CustomButton> {
         child: ElevatedButton(
           onPressed: widget.onPressed,
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(_backgroundColor),
-            surfaceTintColor: MaterialStateProperty.all(_surfaceTintColor),
-            overlayColor: MaterialStateProperty.all(_overlayColor),
-            shape: MaterialStateProperty.all(
+            backgroundColor: WidgetStateProperty.all(_backgroundColor),
+            surfaceTintColor: WidgetStateProperty.all(_surfaceTintColor),
+            overlayColor: WidgetStateProperty.all(_overlayColor),
+            shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: AppThemeBase.borderRadiusSM,
               ),
             ),
-            shadowColor: MaterialStateProperty.all(Colors.transparent),
-            minimumSize: MaterialStateProperty.all(minimumSize),
-            elevation: MaterialStateProperty.all(0),
+            shadowColor: WidgetStateProperty.all(Colors.transparent),
+            minimumSize: WidgetStateProperty.all(minimumSize),
+            elevation: WidgetStateProperty.all(0),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            padding: MaterialStateProperty.all(widget.padding),
+            padding: WidgetStateProperty.all(widget.padding),
           ),
           child: SafeArea(
             bottom: widget.isSafe,
@@ -269,11 +269,11 @@ class _CustomButtonState extends State<CustomButton> {
       case ButtonType.secondary:
         return context.colorScheme.secondary;
       case ButtonType.background:
-        return context.colorScheme.background;
+        return context.colorScheme.surface;
       case ButtonType.tertiary:
         return AppColorsBase.success;
       case ButtonType.noShape:
-        return context.colorScheme.background;
+        return context.colorScheme.surface;
     }
   }
 
@@ -284,9 +284,9 @@ class _CustomButtonState extends State<CustomButton> {
       case ButtonType.secondary:
         return context.colorScheme.onSecondary.withOpacity(.1);
       case ButtonType.background:
-        return context.colorScheme.onBackground.withOpacity(.1);
+        return context.colorScheme.onSurface.withOpacity(.1);
       case ButtonType.noShape:
-        return context.colorScheme.onBackground.withOpacity(.1);
+        return context.colorScheme.onSurface.withOpacity(.1);
       case ButtonType.tertiary:
         return AppColorsBase.success;
     }
