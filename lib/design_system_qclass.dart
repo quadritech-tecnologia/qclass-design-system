@@ -1,5 +1,6 @@
 library design_system_qclass;
 
+export 'package:asuka/asuka.dart';
 export 'package:design_system_qclass/extensions/app_theme_factory.dart';
 export 'package:design_system_qclass/extensions/string_extension.dart';
 export 'package:design_system_qclass/themes/app_theme_base.dart';

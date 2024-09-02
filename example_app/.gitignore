@@ -1,5 +1,14 @@
+.DS_Store
+.flutter-plugins
+.flutter-plugins-dependencies
+.coverage
+coverage
+.idea
+.fvm/flutter_sdk/
+
 # Miscellaneous
 *.class
+*.lock
 *.log
 *.pyc
 *.swp
@@ -11,9 +20,9 @@
 coverage/
 
 # .envs
-# .environment/.env
-# .environment/.env.dev
-# .environment/.env.hml
+.environment/.env
+.environment/.env.dev
+.environment/.env.hml
 
 # IntelliJ related
 *.iml
@@ -34,9 +43,8 @@ coverage/
 .pub/
 .dart_tool/
 build/
+pubspec.lock
 **/ios/Podfile.lock
-# pubspec.lock
-
 # IntelliJ
 *.iml
 *.ipr
@@ -47,9 +55,11 @@ build/
 .DS_Store
 
 # Web related
+lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
+
 
 # Obfuscation related
 app.*.map.json
@@ -67,8 +77,38 @@ app.*.map.json
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 
-/.fvm/
+/.fvm/flutter_sdk/
 /linux/
+/windows/
+/macos/
+
+# iOS/XCode related
+base_app/ios/Flutter/
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+ios/Podfile.lock
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
@@ -81,9 +121,33 @@ app.*.map.json
 # Keys
 docs/keys
 ios/Flutter/flutter_export_environment.sh
+ios/Runner.xcodeproj/project.pbxproj
+.flutter-plugins-dependencies
 
 **/ios/*.ipa
 **/ios/*.app.dSYM.zip
 
-# FVM Version Cache
-.fvm/
+android/fastlane/report.xml
+ios/fastlane/report.xml
+ios/fastlane/Preview.html
+ios/fastlane/metadata/trade_representative_contact_information
+linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus_linux
+linux/flutter/ephemeral/.plugin_symlinks/device_info_plus_linux
+linux/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_linux
+linux/flutter/ephemeral/.plugin_symlinks/image_compression_flutter
+linux/flutter/ephemeral/.plugin_symlinks/package_info_plus_linux
+linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux
+linux/flutter/ephemeral/.plugin_symlinks/share_plus_linux
+linux/flutter/ephemeral/.plugin_symlinks/shared_preferences_linux
+linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux
+linux/flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+linux/flutter/generated_plugins.cmake
+macos/Flutter/ephemeral/flutter_export_environment.sh
+macos/Flutter/ephemeral/Flutter-Generated.xcconfig
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+base_app/.environment/.env
+base_app/.environment/.env.dev
+.fvm/flutter_sdk
+

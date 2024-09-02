@@ -209,7 +209,7 @@ class _CustomButtonState extends State<CustomButton> {
             overlayColor: WidgetStateProperty.all(_overlayColor),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
-                borderRadius: AppThemeBase.borderRadiusSM,
+                borderRadius: AppThemeBase.borderRadiusLG,
               ),
             ),
             shadowColor: WidgetStateProperty.all(Colors.transparent),

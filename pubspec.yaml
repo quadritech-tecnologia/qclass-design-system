@@ -24,6 +24,8 @@ dependencies:
   firebase_core: ^2.31.1
   cloud_firestore: ^4.17.4
 
+  #===== Snackbars, dialogs, BottomSheet, etc.
+  asuka: ^2.2.1
 
 
 dev_dependencies:

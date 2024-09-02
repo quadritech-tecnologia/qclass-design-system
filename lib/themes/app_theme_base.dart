@@ -37,8 +37,11 @@ class AppThemeBase {
   /// BorderRadius.circular(12);
   static BorderRadius get borderRadiusMD => BorderRadius.circular(12);
 
+  /// BorderRadius.circular(20);
+  static BorderRadius get borderRadiusLG => BorderRadius.circular(20);
+
   /// BorderRadius.circular(24);
-  static BorderRadius get borderRadiusLG => BorderRadius.circular(24);
+  static BorderRadius get borderRadiusXLG => BorderRadius.circular(24);
 
   static double get borderWidthSM => 1.5.responsiveWidth;
   static double get borderWidthXS => 1.responsiveWidth;
