@@ -34,3 +34,4 @@ export 'colors/app_colors_base.dart';
 export 'extensions/build_context_extensions.dart';
 export 'themes/responsive/responsive_extension.dart';
 export 'themes/spacing/spacing.dart';
+export 'widgets/screen_responsive/screen_responsive.dart';
