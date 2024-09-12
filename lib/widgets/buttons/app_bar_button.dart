@@ -34,7 +34,7 @@ class AppBarButton extends StatelessWidget {
               child: Theme(
                 data: context.theme.copyWith(
                   iconTheme: context.theme.iconTheme.copyWith(
-                    color: AppColorsBase.neutrla7,
+                    color: AppColorsBase.gray4,
                   ),
                 ),
                 child: Center(child: child),

@@ -118,7 +118,7 @@ class AppThemes {
       errorContainer: AppColorsBase.danger,
       onErrorContainer: const Color(0xFFFFE1E2),
       surface: AppColorsBase.lightBackgroundColor,
-      onSurface: AppColorsBase.primary,
+      onSurface: AppColorsBase.darkBackgroundColor,
       onSurfaceVariant: AppColorsBase.info,
       surfaceContainerHighest: AppColorsBase.primary.withOpacity(.8),
       outline: const Color(0xFFD6F6FF),
@@ -147,12 +147,12 @@ class AppThemes {
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(AppColorsBase.info),
+          backgroundColor: const WidgetStatePropertyAll(Colors.transparent),
           iconColor: WidgetStatePropertyAll(AppColorsBase.white),
           iconSize: WidgetStatePropertyAll(AppFontSize.iconButton.value),
         ),
       ),
-      splashColor: AppColorsBase.tertiary,
+      splashColor: AppColorsBase.gray5,
       highlightColor: AppColorsBase.tertiary,
       shadowColor: AppColorsBase.secondary,
       colorScheme: colorScheme,
@@ -208,12 +208,12 @@ class AppThemes {
         elevation: 0,
       ),
       iconTheme: IconThemeData(
-        color: AppColorsBase.neutrla7,
+        color: AppColorsBase.blue6,
         size: AppFontSize.iconButton.value,
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(AppColorsBase.info),
+          backgroundColor: const WidgetStatePropertyAll(Colors.transparent),
           iconColor: WidgetStatePropertyAll(AppColorsBase.white),
           iconSize: WidgetStatePropertyAll(AppFontSize.iconButton.value),
         ),

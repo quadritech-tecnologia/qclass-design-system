@@ -23,7 +23,7 @@ class CustomTooltip extends StatelessWidget {
         color: context.colorScheme.surface,
         borderRadius: AppThemeBase.borderRadiusSM,
         border: Border.all(
-          color: AppColorsBase.neutrla1,
+          color: AppColorsBase.gray3,
           width: AppThemeBase.lineHeightRegular,
         ),
         boxShadow: [AppThemeBase.shadowLightmodeLevel1],
