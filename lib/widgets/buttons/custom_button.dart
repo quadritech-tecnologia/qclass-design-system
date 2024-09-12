@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../design_system_qclass.dart';
 
-enum ButtonType { primary, secondary, tertiary, background, noShape }
+enum ButtonType { primary, secondary, success, background, noShape }
 
 enum ButtonHeightType { normal, small }
 
@@ -90,18 +90,15 @@ class CustomButton extends StatefulWidget {
             fontSize = context.textTheme.bodySmall?.fontSize;
             break;
         }
-        return CustomTooltip(
-          message: text,
-          child: Text(
-            text,
-            maxLines: 2,
-            textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
-            style: context.textTheme.bodyMedium?.copyWith(
-              fontWeight: context.textTheme.fontWeightBold,
-              fontSize: fontSize,
-              color: color,
-            ),
+        return Text(
+          text,
+          maxLines: 2,
+          textAlign: TextAlign.center,
+          overflow: TextOverflow.ellipsis,
+          style: context.textTheme.bodyMedium?.copyWith(
+            fontWeight: context.textTheme.fontWeightBold,
+            fontSize: fontSize,
+            color: color,
           ),
         );
       },
@@ -257,7 +254,7 @@ class _CustomButtonState extends State<CustomButton> {
         return Colors.transparent;
       case ButtonType.noShape:
         return Colors.transparent;
-      case ButtonType.tertiary:
+      case ButtonType.success:
         return AppColorsBase.success;
     }
   }
@@ -270,7 +267,7 @@ class _CustomButtonState extends State<CustomButton> {
         return context.colorScheme.secondary;
       case ButtonType.background:
         return context.colorScheme.surface;
-      case ButtonType.tertiary:
+      case ButtonType.success:
         return AppColorsBase.success;
       case ButtonType.noShape:
         return context.colorScheme.surface;
@@ -286,8 +283,8 @@ class _CustomButtonState extends State<CustomButton> {
       case ButtonType.background:
         return context.colorScheme.onSurface.withOpacity(.1);
       case ButtonType.noShape:
-        return context.colorScheme.onSurface.withOpacity(.1);
-      case ButtonType.tertiary:
+        return context.colorScheme.secondary;
+      case ButtonType.success:
         return AppColorsBase.success;
     }
   }

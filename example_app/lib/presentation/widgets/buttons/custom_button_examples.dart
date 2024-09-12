@@ -101,7 +101,7 @@ Widget secundaryButton(BuildContext context) {
 @widgetbook.UseCase(name: 'tertiary', type: CustomButton)
 Widget tertiaryButton(BuildContext context) {
   bool isLoading = false;
-  const type = ButtonType.tertiary;
+  const type = ButtonType.success;
 
   void onTap() {
     isLoading = !isLoading;
