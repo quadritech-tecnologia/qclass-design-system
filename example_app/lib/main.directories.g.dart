@@ -11,6 +11,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:example_app/presentation/widgets/buttons/custom_button_examples.dart'
     as _i2;
+import 'package:example_app/presentation/widgets/dialog/custom_dialog.dart'
+    as _i3;
+import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+    as _i4;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -46,7 +50,31 @@ final directories = <_i1.WidgetbookNode>[
             ],
           )
         ],
-      )
+      ),
+      _i1.WidgetbookFolder(
+        name: 'dialogs',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'CustomDialog',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'dialog',
+              builder: _i3.showSuccessSnackBar,
+            ),
+          )
+        ],
+      ),
+      _i1.WidgetbookFolder(
+        name: 'snackbar',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'CustomSnackBar',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'snackbar',
+              builder: _i4.showSuccessSnackBar,
+            ),
+          )
+        ],
+      ),
     ],
   )
 ];
