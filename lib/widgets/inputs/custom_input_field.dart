@@ -156,11 +156,11 @@ class _CustomInputFieldState extends State<CustomInputField> {
                 isCollapsed: true,
                 filled: true,
                 hintStyle: _textTheme.bodyMedium?.copyWith(
-                  color: AppColorsBase.neutrla3,
+                  color: AppColorsBase.gray3,
                   fontSize: fontSize,
                 ),
                 labelStyle: _textTheme.titleMedium?.copyWith(
-                  color: AppColorsBase.grey8,
+                  color: _colorScheme.onPrimary,
                 ),
                 contentPadding: EdgeInsets.symmetric(
                   horizontal: Spacing.sm.value,
@@ -228,7 +228,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
   InputBorder _border(Color color) {
     return OutlineInputBorder(
       borderRadius: AppThemeBase.borderRadiusSM,
-      borderSide: BorderSide(color: color, width: .5),
+      borderSide: BorderSide(color: color),
     );
   }
 

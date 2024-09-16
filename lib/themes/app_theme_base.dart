@@ -31,14 +31,17 @@ class AppThemeBase {
   /// BorderRadius.circular(4);
   static BorderRadius get borderRadiusXSM => BorderRadius.circular(4);
 
-  /// BorderRadius.circular(6);
-  static BorderRadius get borderRadiusSM => BorderRadius.circular(6);
+  /// BorderRadius.circular(8);
+  static BorderRadius get borderRadiusSM => BorderRadius.circular(8);
 
   /// BorderRadius.circular(12);
   static BorderRadius get borderRadiusMD => BorderRadius.circular(12);
 
+  /// BorderRadius.circular(20);
+  static BorderRadius get borderRadiusLG => BorderRadius.circular(20);
+
   /// BorderRadius.circular(24);
-  static BorderRadius get borderRadiusLG => BorderRadius.circular(24);
+  static BorderRadius get borderRadiusXLG => BorderRadius.circular(24);
 
   static double get borderWidthSM => 1.5.responsiveWidth;
   static double get borderWidthXS => 1.responsiveWidth;

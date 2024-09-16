@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -13,10 +13,18 @@ dependencies:
   design_system_qclass:
     path: ../
 
+  #====== livro de widgets ======
+  widgetbook: ^3.8.0  
+  widgetbook_annotation: ^3.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+  #======= livro de widget ======
+  widgetbook_generator: ^3.7.0
+
 
 flutter:
   uses-material-design: true
