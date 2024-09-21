@@ -1,4 +1,3 @@
-import 'package:design_system_qclass/constants/custom_assets.dart';
 import 'package:design_system_qclass/design_system_qclass.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
