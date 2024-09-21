@@ -31,7 +31,7 @@ class CustomImage extends StatelessWidget {
     this.imageSize,
     this.asset,
     this.svgAsset,
-    this.packageName,
+    this.packageName = 'design_system_qclass',
     this.fit = BoxFit.contain,
     this.enableGestures = false,
     this.imageColor,
@@ -45,7 +45,7 @@ class CustomImage extends StatelessWidget {
   final String? svgAsset;
   final Size? imageSize;
   final Color? imageColor;
-  final String? packageName;
+  final String packageName;
   final bool enableGestures;
 
   @override

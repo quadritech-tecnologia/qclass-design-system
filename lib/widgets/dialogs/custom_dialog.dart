@@ -1,4 +1,6 @@
+import 'package:design_system_qclass/constants/custom_assets.dart';
 import 'package:design_system_qclass/design_system_qclass.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
     show
         Align,
@@ -7,9 +9,11 @@ import 'package:flutter/material.dart'
         BoxDecoration,
         BoxShadow,
         BuildContext,
+        Color,
         Colors,
         Column,
         Container,
+        CrossAxisAlignment,
         EdgeInsets,
         Flexible,
         GestureDetector,
@@ -23,15 +27,20 @@ import 'package:flutter/material.dart'
         Padding,
         SafeArea,
         StatelessWidget,
+        Text,
+        TextAlign,
         Widget,
         showGeneralDialog;
 
+enum MessageType { error, warning, success }
+
 class CustomDialog {
-  static Future<bool> show(
+  static Future<bool> _defaultConfig(
     BuildContext context,
     Widget child, {
     bool showClose = false,
     EdgeInsets? padding,
+    Color? backgroundColor,
   }) async {
     return await showGeneralDialog<bool>(
       context: context,
@@ -41,6 +50,7 @@ class CustomDialog {
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       pageBuilder: (_, animation, secondaryAnimation) {
         return _CustomDialog(
+          backgroundColor: backgroundColor,
           showClose: showClose,
           padding: padding,
           child: child,
@@ -48,18 +58,89 @@ class CustomDialog {
       },
     ).then((value) => value == true);
   }
+
+  static Future<bool> show(
+    BuildContext context,
+    Widget child, {
+    bool showClose = false,
+    EdgeInsets? padding,
+  }) async {
+    return await _defaultConfig(context, child,
+        showClose: showClose, padding: padding);
+  }
+
+  static Future<bool> showDefaultMessage({
+    required BuildContext context,
+    required String title,
+    required String message,
+    VoidCallback? onButtonPress,
+    String buttonText = 'Voltar',
+    bool showClose = false,
+    EdgeInsets? padding,
+    Color? backgroundColor,
+    MessageType typeMessage = MessageType.error,
+  }) async {
+    return _defaultConfig(
+      context,
+      showClose: showClose,
+      backgroundColor: backgroundColor,
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          CustomImage(
+            svgAsset: switch (typeMessage) {
+              MessageType.error => CustomAssets.error,
+              MessageType.success => CustomAssets.success,
+              MessageType.warning => CustomAssets.warning,
+            },
+          ),
+          Spacing.lg.vertical,
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: context.textTheme.titleLarge?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.md.vertical,
+          Text(
+            message,
+            textAlign: TextAlign.center,
+            style: context.textTheme.bodyMedium?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.xl.vertical,
+          CustomButton.text(
+            text: buttonText,
+            type: ButtonType.background,
+            backgroundColor: switch (typeMessage) {
+              MessageType.error => context.colorScheme.error,
+              MessageType.success => AppColorsBase.success,
+              MessageType.warning => AppColorsBase.warning2,
+            },
+            onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
+          )
+        ],
+      ),
+    ).then((value) => value == true);
+  }
 }
 
 class _CustomDialog extends StatelessWidget {
-  final bool showClose;
-  final Widget child;
-  final EdgeInsets? padding;
-
   const _CustomDialog({
     required this.showClose,
     required this.child,
     this.padding,
+    this.backgroundColor,
   });
+
+  final bool showClose;
+  final Widget child;
+  final EdgeInsets? padding;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +159,7 @@ class _CustomDialog extends StatelessWidget {
                     color: context.colorScheme.surface,
                     width: 2,
                   ),
-                  color: context.colorScheme.surface,
+                  color: backgroundColor ?? Colors.white,
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 5,
@@ -104,7 +185,7 @@ class _CustomDialog extends StatelessWidget {
                             ),
                             child: Icon(
                               Icons.close_rounded,
-                              color: context.textTheme.bodyMedium?.color,
+                              color: context.colorScheme.onSurface,
                             ),
                           ),
                         ),

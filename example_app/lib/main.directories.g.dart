@@ -58,7 +58,7 @@ final directories = <_i1.WidgetbookNode>[
             name: 'CustomDialog',
             useCase: _i1.WidgetbookUseCase(
               name: 'dialog',
-              builder: _i3.showSuccessSnackBar,
+              builder: _i3.showDialogMessage,
             ),
           )
         ],
