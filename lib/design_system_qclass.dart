@@ -1,6 +1,9 @@
 library design_system_qclass;
 
 export 'package:asuka/asuka.dart';
+//===== constants ======
+export 'package:design_system_qclass/constants/custom_assets.dart';
+
 //===== extensions ======
 export 'package:design_system_qclass/extensions/app_theme_factory.dart';
 export 'package:design_system_qclass/extensions/build_context_extensions.dart';
