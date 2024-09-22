@@ -126,6 +126,52 @@ class CustomDialog {
       ),
     ).then((value) => value == true);
   }
+
+  static Future<bool> showNoConnectiontMessage({
+    required BuildContext context,
+    bool showClose = false,
+    Color? backgroundColor,
+    String buttonText = 'Entendi',
+    EdgeInsets? padding,
+    VoidCallback? onButtonPress,
+  }) async {
+    return _defaultConfig(
+      context,
+      showClose: showClose,
+      backgroundColor: backgroundColor,
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          CustomImage(svgAsset: CustomAssets.connectionError),
+          Spacing.lg.vertical,
+          Text(
+            'Oops, sem conexão',
+            textAlign: TextAlign.center,
+            style: context.textTheme.titleLarge?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.md.vertical,
+          Text(
+            'Você está off-line. Verifique sua conexão',
+            textAlign: TextAlign.center,
+            style: context.textTheme.bodyMedium?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.xl.vertical,
+          CustomButton.text(
+            text: buttonText,
+            type: ButtonType.background,
+            backgroundColor: context.colorScheme.tertiary,
+            onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
+          )
+        ],
+      ),
+    ).then((value) => value == true);
+  }
 }
 
 class _CustomDialog extends StatelessWidget {

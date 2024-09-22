@@ -90,6 +90,19 @@ Widget showDialogMessage(BuildContext context) {
                 );
               },
             ),
+            Spacing.lg.vertical,
+            CustomButton.text(
+              isSafe: true,
+              text: 'Mostrar dialog de sem conexão com internet',
+              isLoading: false,
+              onPressed: () {
+                CustomDialog.showNoConnectiontMessage(
+                  context: context,
+                  backgroundColor: context.colorScheme.surface,
+                  showClose: true,
+                );
+              },
+            ),
           ],
         ),
       ),
