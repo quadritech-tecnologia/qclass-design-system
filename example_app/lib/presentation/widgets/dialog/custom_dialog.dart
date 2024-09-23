@@ -103,6 +103,32 @@ Widget showDialogMessage(BuildContext context) {
                 );
               },
             ),
+            Spacing.lg.vertical,
+            CustomButton.text(
+              isSafe: true,
+              text: 'Mostrar dialog de solicitar permissão GPS',
+              isLoading: false,
+              onPressed: () {
+                CustomDialog.showRequestLocationPermission(
+                  context: context,
+                  backgroundColor: context.colorScheme.surface,
+                  showClose: true,
+                );
+              },
+            ),
+            Spacing.lg.vertical,
+            CustomButton.text(
+              isSafe: true,
+              text: 'Mostrar dialog de solicitar permissão camera',
+              isLoading: false,
+              onPressed: () {
+                CustomDialog.showRequestCameraPermission(
+                  context: context,
+                  backgroundColor: context.colorScheme.surface,
+                  showClose: true,
+                );
+              },
+            ),
           ],
         ),
       ),

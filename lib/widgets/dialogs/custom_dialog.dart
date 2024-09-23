@@ -172,6 +172,100 @@ class CustomDialog {
       ),
     ).then((value) => value == true);
   }
+
+  static Future<bool> showRequestLocationPermission({
+    required BuildContext context,
+    bool showClose = false,
+    Color? backgroundColor,
+    String buttonText = 'Continuar',
+    EdgeInsets? padding,
+    VoidCallback? onButtonPress,
+  }) async {
+    return _defaultConfig(
+      context,
+      showClose: showClose,
+      backgroundColor: backgroundColor,
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          CustomImage(svgAsset: CustomAssets.gps),
+          Spacing.lg.vertical,
+          Text(
+            'Permitir acesso a localização',
+            textAlign: TextAlign.center,
+            style: context.textTheme.titleLarge?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.md.vertical,
+          Text(
+            'Precisamos da sua localização para acompanhar seu percurso durante as aulas práticas. \n'
+            'Não se preocupe, outras pessoas ou APPs não terão acesso a sua localização',
+            textAlign: TextAlign.center,
+            style: context.textTheme.bodyMedium?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.xl.vertical,
+          CustomButton.text(
+            text: buttonText,
+            type: ButtonType.background,
+            backgroundColor: context.colorScheme.tertiary,
+            onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
+          )
+        ],
+      ),
+    ).then((value) => value == true);
+  }
+
+  static Future<bool> showRequestCameraPermission({
+    required BuildContext context,
+    bool showClose = false,
+    Color? backgroundColor,
+    String buttonText = 'Continuar',
+    EdgeInsets? padding,
+    VoidCallback? onButtonPress,
+  }) async {
+    return _defaultConfig(
+      context,
+      showClose: showClose,
+      backgroundColor: backgroundColor,
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          CustomImage(svgAsset: CustomAssets.camera),
+          Spacing.lg.vertical,
+          Text(
+            'Permitir acesso a câmera',
+            textAlign: TextAlign.center,
+            style: context.textTheme.titleLarge?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.md.vertical,
+          Text(
+            'Precisamos da sua câmera para gravar suas aulas e confirmar sua presença. \n'
+            'Não se preocupe, outras pessoas ou APPs não terão acesso a sua c6amera',
+            textAlign: TextAlign.center,
+            style: context.textTheme.bodyMedium?.copyWith(
+              color: context.colorScheme.onSurface,
+            ),
+          ),
+          Spacing.xl.vertical,
+          CustomButton.text(
+            text: buttonText,
+            type: ButtonType.background,
+            backgroundColor: context.colorScheme.tertiary,
+            onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
+          )
+        ],
+      ),
+    ).then((value) => value == true);
+  }
 }
 
 class _CustomDialog extends StatelessWidget {

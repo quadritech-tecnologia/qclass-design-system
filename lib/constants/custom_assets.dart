@@ -5,6 +5,7 @@ class CustomAssets {
   static String get gps => 'assets/vectors/gps.svg';
   static String get error => 'assets/vectors/error.svg';
   static String get image => 'assets/vectors/image.svg';
+  static String get camera => 'assets/vectors/camera.svg';
   static String get warning => 'assets/vectors/warning.svg';
   static String get success => 'assets/vectors/success.svg';
   static String get noSearchResult => 'assets/vectors/no_search_result.svg';
