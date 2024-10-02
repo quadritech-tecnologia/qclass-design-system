@@ -135,6 +135,28 @@ class AppThemes {
     return ThemeData(
       brightness: Brightness.light,
       primaryColor: colorScheme.primary,
+      hoverColor: colorScheme.onSurface.withOpacity(.26),
+      radioTheme: RadioThemeData(
+        fillColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.disabled)) {
+            return colorScheme.onSurface.withOpacity(.46);
+          } else if (state.contains(WidgetState.selected)) {
+            return colorScheme.tertiary;
+          }
+          return AppColorsBase.black.withOpacity(.56);
+        }),
+      ),
+      checkboxTheme: CheckboxThemeData(
+        side: BorderSide(color: AppColorsBase.black.withOpacity(.56)),
+        fillColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.disabled)) {
+            return colorScheme.onSurface.withOpacity(.46);
+          } else if (state.contains(WidgetState.selected)) {
+            return colorScheme.tertiary;
+          }
+          return colorScheme.surface;
+        }),
+      ),
       appBarTheme: AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         surfaceTintColor: AppColorsBase.white,
@@ -154,7 +176,7 @@ class AppThemes {
         ),
       ),
       splashColor: AppColorsBase.gray5,
-      highlightColor: AppColorsBase.tertiary,
+      highlightColor: colorScheme.onSurface.withOpacity(.26),
       shadowColor: AppColorsBase.secondary,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColorsBase.lightBackgroundColor,
