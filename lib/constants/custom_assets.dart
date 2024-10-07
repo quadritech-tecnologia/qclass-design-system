@@ -3,6 +3,7 @@ class CustomAssets {
   static String get packageName => 'design_system_qclass';
 
   static String get gps => 'assets/vectors/gps.svg';
+  static String get robo => 'assets/vectors/robo.svg';
   static String get error => 'assets/vectors/error.svg';
   static String get image => 'assets/vectors/image.svg';
   static String get camera => 'assets/vectors/camera.svg';
