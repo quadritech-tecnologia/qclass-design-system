@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class AppColorsBase {
+class AppColorsBase {
   // Core
   static Color get primary => const Color(0xFF1887B7);
   static Color get secondary => const Color(0xFF62B6DB);
@@ -15,15 +15,16 @@ abstract class AppColorsBase {
   static Color get warning2 => const Color(0xFFAE8512);
 
   // Danger and errors
-  static Color get danger => const Color(0xFFAC4450);
+  static Color get danger => const Color(0xFFAD3034);
   static Color get danger2 => const Color(0xFFB71818);
+  static Color get danger3 => const Color(0xFFAC4450);
 
   // Background colors
   static Color lightBackgroundColor = const Color(0xFFF1F1F1);
   static Color darkBackgroundColor = const Color(0xFF575757);
 
   // colors
-  static Color get reddd => Colors.red;
+  static Color get red => Colors.red;
   static Color get errorColor => danger;
   static Color get error => danger;
   static Color get lighterError => const Color(0xffffe1e2);

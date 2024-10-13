@@ -24,7 +24,7 @@ class CustomInputField extends StatefulWidget {
     this.focusNode,
     this.maxLength,
     this.maxLines = 1,
-    this.autofocus = true,
+    this.autofocus = false,
     this.textInputAction,
     this.enabled = true,
     this.labelWidget,

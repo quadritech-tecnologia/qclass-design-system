@@ -1,7 +1,5 @@
+import 'package:design_system_qclass/design_system_qclass.dart';
 import 'package:flutter/material.dart';
-
-import '../themes/app_theme_base.dart';
-import '../themes/typography/typography_constants.dart';
 
 extension TextThemeExtension on TextTheme {
   ///Family: Poppins

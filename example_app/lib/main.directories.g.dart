@@ -13,8 +13,10 @@ import 'package:example_app/presentation/widgets/buttons/custom_button_examples.
     as _i2;
 import 'package:example_app/presentation/widgets/dialog/custom_dialog.dart'
     as _i3;
-import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+import 'package:example_app/presentation/widgets/inputs/custom_input_field.dart'
     as _i4;
+import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+    as _i5;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -58,7 +60,19 @@ final directories = <_i1.WidgetbookNode>[
             name: 'CustomDialog',
             useCase: _i1.WidgetbookUseCase(
               name: 'dialog',
-              builder: _i3.showSuccessSnackBar,
+              builder: _i3.showDialogMessage,
+            ),
+          )
+        ],
+      ),
+      _i1.WidgetbookFolder(
+        name: 'inputs',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'CustomInputField',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'InputField',
+              builder: _i4.showInputText,
             ),
           )
         ],
@@ -70,7 +84,7 @@ final directories = <_i1.WidgetbookNode>[
             name: 'CustomSnackBar',
             useCase: _i1.WidgetbookUseCase(
               name: 'snackbar',
-              builder: _i4.showSuccessSnackBar,
+              builder: _i5.showSuccessSnackBar,
             ),
           )
         ],

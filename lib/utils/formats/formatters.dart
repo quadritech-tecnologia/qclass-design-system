@@ -61,6 +61,15 @@ class Formatters {
     ).maskText(accessKey);
   }
 
+  static String cpfFormatter(String cpf) {
+    return MaskTextInputFormatter(
+      mask: '###.###.###-##',
+      filter: {
+        '#': RegExp(r'[0-9]'),
+      },
+    ).maskText(cpf);
+  }
+
   static String cpfUnmask(String cpf) {
     return MaskTextInputFormatter(
       mask: '###.###.###-##',

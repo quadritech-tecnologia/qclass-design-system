@@ -17,6 +17,7 @@ class CustomButton extends StatefulWidget {
     this.isSafe = false,
     this.type = ButtonType.primary,
     this.heightType = ButtonHeightType.normal,
+    this.backgroundColor,
   });
 
   final ButtonType type;
@@ -27,6 +28,7 @@ class CustomButton extends StatefulWidget {
   final bool isLoading;
   final bool isSafe;
   final EdgeInsets padding;
+  final Color? backgroundColor;
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
@@ -70,9 +72,6 @@ class CustomButton extends StatefulWidget {
         late final Color color;
         late final double? fontSize;
         switch (type) {
-          case ButtonType.background:
-            color = context.colorScheme.primary;
-            break;
           case ButtonType.noShape:
             color = context.colorScheme.primary;
             break;
@@ -114,6 +113,7 @@ class CustomButton extends StatefulWidget {
     bool isLoading = false,
     bool isSafe = false,
     EdgeInsets padding = EdgeInsets.zero,
+    Color? backgroundColor,
   }) {
     return CustomButton(
       type: type,
@@ -122,6 +122,7 @@ class CustomButton extends StatefulWidget {
       isEnabled: isEnabled,
       isLoading: isLoading,
       padding: padding,
+      backgroundColor: backgroundColor,
       child: textValue(text, type: type),
     );
   }
@@ -133,6 +134,7 @@ class CustomButton extends StatefulWidget {
     bool isEnabled = true,
     bool isLoading = false,
     bool isSafe = false,
+    Color? backgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
     return CustomButton(
@@ -142,6 +144,7 @@ class CustomButton extends StatefulWidget {
       isEnabled: isEnabled,
       isLoading: isLoading,
       padding: padding,
+      backgroundColor: backgroundColor,
       child: iconValue(icon, type: type),
     );
   }
@@ -154,6 +157,7 @@ class CustomButton extends StatefulWidget {
     bool isEnabled = true,
     bool isLoading = false,
     bool isSafe = false,
+    Color? backgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
     return CustomButton(
@@ -163,6 +167,7 @@ class CustomButton extends StatefulWidget {
       isEnabled: isEnabled,
       isLoading: isLoading,
       padding: padding,
+      backgroundColor: backgroundColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
@@ -201,12 +206,14 @@ class _CustomButtonState extends State<CustomButton> {
         child: ElevatedButton(
           onPressed: widget.onPressed,
           style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(_backgroundColor),
+            backgroundColor: WidgetStateProperty.all(
+              widget.backgroundColor ?? _backgroundColor,
+            ),
             surfaceTintColor: WidgetStateProperty.all(_surfaceTintColor),
             overlayColor: WidgetStateProperty.all(_overlayColor),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
-                borderRadius: AppThemeBase.borderRadiusLG,
+                borderRadius: context.theme.borderRadiusLG,
               ),
             ),
             shadowColor: WidgetStateProperty.all(Colors.transparent),

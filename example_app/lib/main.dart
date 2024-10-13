@@ -40,7 +40,7 @@ class _MainAppState extends State<MainApp> {
           themeBuilder: (context, theme, child) {
             themeMode = theme;
 
-            return child;
+            return Theme(data: theme, child: child);
           },
         ),
         DeviceFrameAddon(devices: Devices.ios.all),
