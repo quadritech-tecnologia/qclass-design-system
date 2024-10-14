@@ -19,7 +19,7 @@ class CloseDialogButton extends StatelessWidget {
             padding: EdgeInsets.all(Spacing.xs.value),
             child: Icon(
               Icons.close,
-              size: 18,
+              size: 24,
               color: const Color(0xFF343A40).withOpacity(.56),
             ),
           ),

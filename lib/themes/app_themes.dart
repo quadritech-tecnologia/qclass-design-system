@@ -182,6 +182,46 @@ class AppThemes {
       scaffoldBackgroundColor: AppColorsBase.lightBackgroundColor,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: _textTheme(colorScheme),
+      datePickerTheme: DatePickerThemeData(
+        yearForegroundColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.selected)) {
+            return colorScheme.surface;
+          }
+          return colorScheme.onSurface;
+        }),
+        yearOverlayColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.selected)) {
+            return colorScheme.surface;
+          }
+          return colorScheme.onSurface;
+        }),
+        dividerColor: colorScheme.onSurface.withOpacity(.56),
+        headerBackgroundColor: colorScheme.surface,
+        headerHeadlineStyle: _textTheme(colorScheme).titleMedium,
+        headerForegroundColor: colorScheme.tertiary,
+        dayStyle: _textTheme(colorScheme).bodyMedium,
+        yearStyle: _textTheme(colorScheme).titleMedium,
+        dayForegroundColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.selected)) {
+            return colorScheme.surface;
+          }
+          return colorScheme.onSurface;
+        }),
+        weekdayStyle: _textTheme(colorScheme).titleSmall,
+        surfaceTintColor: colorScheme.surface,
+        backgroundColor: colorScheme.surface,
+
+        /// range selector
+        rangePickerBackgroundColor: colorScheme.surface,
+        rangePickerShadowColor: colorScheme.surface,
+        rangePickerHeaderForegroundColor: colorScheme.onSurface,
+        rangeSelectionOverlayColor: WidgetStateProperty.resolveWith((state) {
+          if (state.contains(WidgetState.selected)) {
+            return colorScheme.surface;
+          }
+          return colorScheme.onSurface;
+        }),
+      ),
     );
   }
 

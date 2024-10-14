@@ -185,10 +185,7 @@ class _CustomButtonState extends State<CustomButton> {
   Size get minimumSize {
     switch (widget.heightType) {
       case ButtonHeightType.normal:
-        return Size(
-          AppThemeBase.buttonHeightMD,
-          AppThemeBase.buttonHeightMD,
-        );
+        return const Size(40, 40);
       case ButtonHeightType.small:
         return Size(
           AppThemeBase.buttonHeightSM,
@@ -213,7 +210,7 @@ class _CustomButtonState extends State<CustomButton> {
             overlayColor: WidgetStateProperty.all(_overlayColor),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
-                borderRadius: context.theme.borderRadiusLG,
+                borderRadius: context.theme.borderRadiusSM,
               ),
             ),
             shadowColor: WidgetStateProperty.all(Colors.transparent),

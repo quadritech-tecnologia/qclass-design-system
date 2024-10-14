@@ -68,6 +68,7 @@ class DateFormat {
     return toDate(date1) == toDate(date2);
   }
 
+  /// verifica se a data passada é o dia atual
   static bool dateIsToday(DateTime date) {
     return toDate(date) == toDate(DateTime.now());
   }
