@@ -6,6 +6,7 @@ enum ButtonType { primary, secondary, success, background, noShape }
 
 enum ButtonHeightType { normal, small }
 
+/// Remover componente de button
 class CustomButton extends StatefulWidget {
   const CustomButton({
     super.key,
@@ -73,8 +74,9 @@ class CustomButton extends StatefulWidget {
         late final double? fontSize;
         switch (type) {
           case ButtonType.noShape:
-            color = context.colorScheme.primary;
+            color = context.colorScheme.tertiary;
             break;
+
           default:
             color = context.isDarkMode
                 ? context.colorScheme.onSurface
@@ -211,6 +213,12 @@ class _CustomButtonState extends State<CustomButton> {
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: context.theme.borderRadiusSM,
+                side: BorderSide(
+                  width: 1,
+                  color: (widget.type != ButtonType.secondary)
+                      ? context.colorScheme.tertiary
+                      : Colors.transparent,
+                ),
               ),
             ),
             shadowColor: WidgetStateProperty.all(Colors.transparent),
@@ -253,7 +261,7 @@ class _CustomButtonState extends State<CustomButton> {
       case ButtonType.primary:
         return context.colorScheme.tertiary;
       case ButtonType.secondary:
-        return context.colorScheme.secondary;
+        return context.colorScheme.primary;
       case ButtonType.background:
         return Colors.transparent;
       case ButtonType.noShape:
@@ -281,15 +289,9 @@ class _CustomButtonState extends State<CustomButton> {
   Color get _overlayColor {
     switch (widget.type) {
       case ButtonType.primary:
-        return AppColorsBase.white.withOpacity(.1);
-      case ButtonType.secondary:
-        return context.colorScheme.onSecondary.withOpacity(.1);
-      case ButtonType.background:
+        return context.colorScheme.surface.withOpacity(.1);
+      default:
         return context.colorScheme.onSurface.withOpacity(.1);
-      case ButtonType.noShape:
-        return context.colorScheme.secondary;
-      case ButtonType.success:
-        return AppColorsBase.success;
     }
   }
 }
