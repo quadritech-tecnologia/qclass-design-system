@@ -210,6 +210,9 @@ class AppThemes {
         weekdayStyle: _textTheme(colorScheme).titleSmall,
         surfaceTintColor: colorScheme.surface,
         backgroundColor: colorScheme.surface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Spacing.sm.value),
+        ),
 
         /// range selector
         rangePickerBackgroundColor: colorScheme.surface,
@@ -221,6 +224,25 @@ class AppThemes {
           }
           return colorScheme.onSurface;
         }),
+      ),
+      tabBarTheme: TabBarTheme(
+        dividerHeight: 1,
+        labelColor: colorScheme.tertiary,
+        indicatorColor: colorScheme.tertiary,
+        indicatorSize: TabBarIndicatorSize.tab,
+        dividerColor: colorScheme.onSurface.withOpacity(.16),
+        labelStyle: _textTheme(colorScheme).bodyMedium?.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
+        unselectedLabelStyle: _textTheme(colorScheme).bodyMedium?.copyWith(
+              fontWeight: FontWeight.w500,
+            ),
+        unselectedLabelColor:
+            _textTheme(colorScheme).bodyLarge?.color?.withOpacity(.86),
+        labelPadding: EdgeInsets.symmetric(vertical: Spacing.xs.value),
+        overlayColor: WidgetStatePropertyAll(
+          _textTheme(colorScheme).bodyLarge?.color?.withOpacity(.08),
+        ),
       ),
     );
   }
