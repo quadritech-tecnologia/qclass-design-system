@@ -19,3 +19,4 @@ export 'package:design_system_qclass/widgets/scroll/full_size_scrollable.dart';
 export 'package:design_system_qclass/widgets/snackbar/custom_snack_bar.dart';
 export 'package:design_system_qclass/widgets/text/text_link.dart';
 export 'package:design_system_qclass/widgets/tooltip/custom_tooltip.dart';
+export 'package:design_system_qclass/widgets/alerts_page/class_not_found.dart';
