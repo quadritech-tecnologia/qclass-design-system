@@ -7,7 +7,6 @@ import 'package:flutter/material.dart'
         Column,
         Container,
         CrossAxisAlignment,
-        Divider,
         EdgeInsets,
         Flexible,
         Icon,
