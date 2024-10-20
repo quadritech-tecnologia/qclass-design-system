@@ -22,10 +22,6 @@ import 'package:flutter/material.dart'
         Widget;
 import 'package:flutter/widgets.dart';
 
-import '../../../extensions/build_context_extensions.dart';
-import '../../dialogs/custom_dialog.dart';
-import '../../scroll/custom_scroll_content.dart';
-
 class ImageError extends StatefulWidget {
   const ImageError({super.key, required this.error});
 
