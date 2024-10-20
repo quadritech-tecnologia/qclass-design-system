@@ -21,8 +21,10 @@ import 'package:example_app/presentation/widgets/inputs/custom_input_field.dart'
     as _i6;
 import 'package:example_app/presentation/widgets/pickers/custom_date_picker.dart'
     as _i7;
-import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+import 'package:example_app/presentation/widgets/progress/custom_linear_progress_example.dart'
     as _i8;
+import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+    as _i9;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -120,13 +122,25 @@ final directories = <_i1.WidgetbookNode>[
         ],
       ),
       _i1.WidgetbookFolder(
+        name: 'progress',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'CustomLinearProgress',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'LinearProgress',
+              builder: _i8.customLinearProgress,
+            ),
+          )
+        ],
+      ),
+      _i1.WidgetbookFolder(
         name: 'snackbar',
         children: [
           _i1.WidgetbookLeafComponent(
             name: 'CustomSnackBar',
             useCase: _i1.WidgetbookUseCase(
               name: 'snackbar',
-              builder: _i8.showSuccessSnackBar,
+              builder: _i9.showSuccessSnackBar,
             ),
           )
         ],

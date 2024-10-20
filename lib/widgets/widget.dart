@@ -15,6 +15,7 @@ export 'package:design_system_qclass/widgets/loading/custom_refresh_indicator.da
 export 'package:design_system_qclass/widgets/loading/custom_shimmer.dart';
 export 'package:design_system_qclass/widgets/pickers/custom_select_calendar_date.dart';
 export 'package:design_system_qclass/widgets/pickers/custom_time_picker.dart';
+export 'package:design_system_qclass/widgets/progress/custom_linear_progress.dart';
 export 'package:design_system_qclass/widgets/screen_responsive/screen_responsive.dart';
 export 'package:design_system_qclass/widgets/scroll/custom_scroll_content.dart';
 export 'package:design_system_qclass/widgets/scroll/full_size_scrollable.dart';
