@@ -74,7 +74,7 @@ class CustomButton extends StatefulWidget {
         late final double? fontSize;
         switch (type) {
           case ButtonType.noShape:
-            color = context.colorScheme.tertiary;
+            color = context.colorScheme.primary;
             break;
 
           default:
@@ -216,7 +216,7 @@ class _CustomButtonState extends State<CustomButton> {
                 side: BorderSide(
                   width: 1,
                   color: (widget.type != ButtonType.secondary)
-                      ? context.colorScheme.tertiary
+                      ? context.colorScheme.primary
                       : Colors.transparent,
                 ),
               ),
@@ -259,7 +259,7 @@ class _CustomButtonState extends State<CustomButton> {
   Color get _backgroundColor {
     switch (widget.type) {
       case ButtonType.primary:
-        return context.colorScheme.tertiary;
+        return context.colorScheme.primary;
       case ButtonType.secondary:
         return context.colorScheme.primary;
       case ButtonType.background:
@@ -274,7 +274,7 @@ class _CustomButtonState extends State<CustomButton> {
   Color get _surfaceTintColor {
     switch (widget.type) {
       case ButtonType.primary:
-        return context.colorScheme.tertiary;
+        return context.colorScheme.primary;
       case ButtonType.secondary:
         return context.colorScheme.secondary;
       case ButtonType.background:

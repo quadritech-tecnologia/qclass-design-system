@@ -15,7 +15,7 @@ Widget showDatePicker(BuildContext context) {
       Center(
         child: CustomButton.text(
           text: 'Mostrar Calendário',
-          backgroundColor: context.colorScheme.tertiary,
+          backgroundColor: context.colorScheme.primary,
           onPressed: () async {
             await CustomSelectDate.selectCalendarDate(context: context)
                 .then((value) {

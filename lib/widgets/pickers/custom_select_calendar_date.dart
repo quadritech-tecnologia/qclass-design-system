@@ -30,7 +30,7 @@ class CustomSelectDate {
             iconButtonTheme: IconButtonThemeData(
               style: IconButton.styleFrom(
                 backgroundColor: Colors.transparent,
-                foregroundColor: color.tertiary,
+                foregroundColor: color.primary,
               ),
             ),
           ),
@@ -66,7 +66,7 @@ class CustomSelectDate {
             iconButtonTheme: IconButtonThemeData(
               style: IconButton.styleFrom(
                 backgroundColor: Colors.transparent,
-                foregroundColor: color.tertiary,
+                foregroundColor: color.primary,
               ),
             ),
           ),

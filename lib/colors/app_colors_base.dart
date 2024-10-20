@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppColorsBase {
   // Core
-  static Color get primary => const Color(0xFF1887B7);
+  static Color get primary => const Color(0xFF12668A);
   static Color get secondary => const Color(0xFF62B6DB);
-  static Color get tertiary => const Color(0xFF12668A);
+  static Color get tertiary => const Color(0xFF1887B7);
 
   static Color get white => const Color(0xFFFCFEFF);
   static Color get info => const Color(0xFFC66C61);

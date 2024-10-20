@@ -165,7 +165,7 @@ class CustomDialog {
           CustomButton.text(
             text: buttonText,
             type: ButtonType.background,
-            backgroundColor: context.colorScheme.tertiary,
+            backgroundColor: context.colorScheme.primary,
             onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
           )
         ],
@@ -212,7 +212,7 @@ class CustomDialog {
           CustomButton.text(
             text: buttonText,
             type: ButtonType.background,
-            backgroundColor: context.colorScheme.tertiary,
+            backgroundColor: context.colorScheme.primary,
             onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
           )
         ],
@@ -259,7 +259,7 @@ class CustomDialog {
           CustomButton.text(
             text: buttonText,
             type: ButtonType.background,
-            backgroundColor: context.colorScheme.tertiary,
+            backgroundColor: context.colorScheme.primary,
             onPressed: onButtonPress ?? () => Navigator.of(context).pop(),
           )
         ],

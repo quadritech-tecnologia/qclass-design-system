@@ -11,7 +11,7 @@ Widget showBottomSheet(BuildContext context) {
       Center(
         child: CustomButton.text(
           text: 'Mostrar bottomSheet',
-          backgroundColor: context.colorScheme.tertiary,
+          backgroundColor: context.colorScheme.primary,
           onPressed: () async {
             await CustomBottomSheet.showBottomSheet(
               context: context,
