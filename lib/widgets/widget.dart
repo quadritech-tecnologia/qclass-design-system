@@ -1,8 +1,10 @@
+export 'package:design_system_qclass/widgets/alerts_page/class_not_found.dart';
 export 'package:design_system_qclass/widgets/bottom_sheet/custom_bottom_sheet.dart';
 export 'package:design_system_qclass/widgets/buttons/app_bar_button.dart';
 export 'package:design_system_qclass/widgets/buttons/custom_button.dart';
 export 'package:design_system_qclass/widgets/dialogs/close_dialog_button.dart';
 export 'package:design_system_qclass/widgets/dialogs/custom_dialog.dart';
+export 'package:design_system_qclass/widgets/divider/custom_divider.dart';
 export 'package:design_system_qclass/widgets/image_view/custom_image.dart';
 export 'package:design_system_qclass/widgets/image_view/image_url.dart';
 export 'package:design_system_qclass/widgets/image_view/widgets/image_error.dart';
@@ -19,4 +21,3 @@ export 'package:design_system_qclass/widgets/scroll/full_size_scrollable.dart';
 export 'package:design_system_qclass/widgets/snackbar/custom_snack_bar.dart';
 export 'package:design_system_qclass/widgets/text/text_link.dart';
 export 'package:design_system_qclass/widgets/tooltip/custom_tooltip.dart';
-export 'package:design_system_qclass/widgets/alerts_page/class_not_found.dart';

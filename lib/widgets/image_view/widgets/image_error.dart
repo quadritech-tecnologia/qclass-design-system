@@ -1,3 +1,4 @@
+import 'package:design_system_qclass/design_system_qclass.dart';
 import 'package:flutter/material.dart'
     show
         Alignment,
@@ -76,7 +77,7 @@ class _ImageErrorState extends State<ImageError> {
             'Image Error',
             style: context.textTheme.titleLarge,
           ),
-          Divider(color: context.colorScheme.onSurface),
+          const CustomDivider(),
           Flexible(
             child: CustomScrollContent(
               child: RichText(

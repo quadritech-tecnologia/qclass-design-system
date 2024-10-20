@@ -15,12 +15,14 @@ import 'package:example_app/presentation/widgets/buttons/custom_button_examples.
     as _i3;
 import 'package:example_app/presentation/widgets/dialog/custom_dialog.dart'
     as _i4;
-import 'package:example_app/presentation/widgets/inputs/custom_input_field.dart'
+import 'package:example_app/presentation/widgets/divider/custom_divider_example.dart'
     as _i5;
-import 'package:example_app/presentation/widgets/pickers/custom_date_picker.dart'
+import 'package:example_app/presentation/widgets/inputs/custom_input_field.dart'
     as _i6;
-import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+import 'package:example_app/presentation/widgets/pickers/custom_date_picker.dart'
     as _i7;
+import 'package:example_app/presentation/widgets/snackbar/custom_snack_bar.dart'
+    as _i8;
 import 'package:widgetbook/widgetbook.dart' as _i1;
 
 final directories = <_i1.WidgetbookNode>[
@@ -82,13 +84,25 @@ final directories = <_i1.WidgetbookNode>[
         ],
       ),
       _i1.WidgetbookFolder(
+        name: 'divider',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'CustomDivider',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'CustomDivider',
+              builder: _i5.customDivider,
+            ),
+          )
+        ],
+      ),
+      _i1.WidgetbookFolder(
         name: 'inputs',
         children: [
           _i1.WidgetbookLeafComponent(
             name: 'CustomInputField',
             useCase: _i1.WidgetbookUseCase(
               name: 'InputField',
-              builder: _i5.showInputText,
+              builder: _i6.showInputText,
             ),
           )
         ],
@@ -100,7 +114,7 @@ final directories = <_i1.WidgetbookNode>[
             name: 'CustomSelectDate',
             useCase: _i1.WidgetbookUseCase(
               name: 'ShowDatePicker',
-              builder: _i6.showDatePicker,
+              builder: _i7.showDatePicker,
             ),
           )
         ],
@@ -112,7 +126,7 @@ final directories = <_i1.WidgetbookNode>[
             name: 'CustomSnackBar',
             useCase: _i1.WidgetbookUseCase(
               name: 'snackbar',
-              builder: _i7.showSuccessSnackBar,
+              builder: _i8.showSuccessSnackBar,
             ),
           )
         ],
